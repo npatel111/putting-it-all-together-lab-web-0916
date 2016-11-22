@@ -1,3 +1,5 @@
+import { store } from '../index'
+
 export default (state={}, action) => {
   switch (action.type) {
     case 'FETCH_DECK':
@@ -59,6 +61,8 @@ export default (state={}, action) => {
           {name:"King of Hearts", value: 10}
         ]
       }
+    case 'SET_AI_CARDS':
+      return Object.assign({}, store, {aiCards: action.payload.aiCards, deck: action.payload.deck})
 
     default:
       return state

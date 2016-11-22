@@ -1,21 +1,23 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {createStore} from '../store'
-import blackjackReducer from '../reducers/blackjack_reducer'
+import { store } from '../index.js'
 
-const store = createStore(blackjackReducer)
+
+
 export default class App extends React.Component {
+
   constructor(props) {
     super(props)
-    fetchDeck()
+    // fetchDeck()
     debugger
-    setAICards(store.deck)
-    setUserCards(store.deck)
+    // setAICards(store)
+    // setUserCards(store)
   }
 
   render() {
     return (
       <div>
+        HELLO
       </div>
     )
   }

@@ -1,3 +1,4 @@
+import { store } from '../index.js'
 
 export function fetchDeck() {
   debugger
@@ -6,12 +7,12 @@ export function fetchDeck() {
   }
 }
 
-export function setAICards(store.deck) {
+export function setAICards(store) {
   debugger
-  var item1 = store.deck[Math.floor(Math.random()*store.deck.length)].pop();
-  var item2 = store.deck[Math.floor(Math.random()*store.deck.length)].pop();
+  var item1 = store.deck[Math.floor(Math.random()*store.deck.length)];
+  var item2 = store.deck[Math.floor(Math.random()*store.deck.length)];
   return {
-    type: 'FETCH_DECK',
+    type: 'SET_AI_CARDS',
     payload: {deck: store.deck, aiCards: [item1, item2]}
   }
 }

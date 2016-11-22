@@ -1,5 +1,5 @@
 export const createStore = (reducer) => {
-  let state;
+  let state = {userCards: [], aiCards: [], deck: []};
   let listeners = [];
   const getState = () => state
 
@@ -19,3 +19,5 @@ export const createStore = (reducer) => {
     subscribe: subscribe
   }
 }
+
+export default createStore
